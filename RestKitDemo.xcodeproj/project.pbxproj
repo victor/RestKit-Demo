@@ -28,6 +28,8 @@
 		575A3F7E14581CCA00537E2E /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 575A3F7D14581CCA00537E2E /* MobileCoreServices.framework */; };
 		575A3F8014581CE100537E2E /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 575A3F7F14581CE100537E2E /* SystemConfiguration.framework */; };
 		575A3F8214581CF400537E2E /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 575A3F8114581CF400537E2E /* libxml2.dylib */; };
+		575A3F9C14581F4900537E2E /* NCEEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 575A3F9B14581F4900537E2E /* NCEEvent.m */; };
+		575A3F9F14581F6000537E2E /* NCESpeaker.m in Sources */ = {isa = PBXBuildFile; fileRef = 575A3F9E14581F6000537E2E /* NCESpeaker.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -141,6 +143,10 @@
 		575A3F7D14581CCA00537E2E /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		575A3F7F14581CE100537E2E /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		575A3F8114581CF400537E2E /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
+		575A3F9A14581F4900537E2E /* NCEEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCEEvent.h; sourceTree = "<group>"; };
+		575A3F9B14581F4900537E2E /* NCEEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCEEvent.m; sourceTree = "<group>"; };
+		575A3F9D14581F6000537E2E /* NCESpeaker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCESpeaker.h; sourceTree = "<group>"; };
+		575A3F9E14581F6000537E2E /* NCESpeaker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCESpeaker.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -170,10 +176,6 @@
 		575A3E81145811C300537E2E = {
 			isa = PBXGroup;
 			children = (
-				575A3F8114581CF400537E2E /* libxml2.dylib */,
-				575A3F7F14581CE100537E2E /* SystemConfiguration.framework */,
-				575A3F7D14581CCA00537E2E /* MobileCoreServices.framework */,
-				575A3F7B14581CB800537E2E /* CFNetwork.framework */,
 				575A3F131458164700537E2E /* 3rd Party */,
 				575A3E98145811C400537E2E /* RestKitDemo */,
 				575A3E8F145811C400537E2E /* Frameworks */,
@@ -192,6 +194,10 @@
 		575A3E8F145811C400537E2E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				575A3F8114581CF400537E2E /* libxml2.dylib */,
+				575A3F7F14581CE100537E2E /* SystemConfiguration.framework */,
+				575A3F7D14581CCA00537E2E /* MobileCoreServices.framework */,
+				575A3F7B14581CB800537E2E /* CFNetwork.framework */,
 				575A3E90145811C400537E2E /* UIKit.framework */,
 				575A3E92145811C400537E2E /* Foundation.framework */,
 				575A3E94145811C400537E2E /* CoreGraphics.framework */,
@@ -203,6 +209,7 @@
 		575A3E98145811C400537E2E /* RestKitDemo */ = {
 			isa = PBXGroup;
 			children = (
+				575A3F9914581F2000537E2E /* Model */,
 				575A3EA1145811C400537E2E /* NCEAppDelegate.h */,
 				575A3EA2145811C400537E2E /* NCEAppDelegate.m */,
 				575A3EA7145811C400537E2E /* NCEMasterViewController.h */,
@@ -252,6 +259,17 @@
 				575A3F6A1458189000537E2E /* UISpec.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		575A3F9914581F2000537E2E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				575A3F9A14581F4900537E2E /* NCEEvent.h */,
+				575A3F9B14581F4900537E2E /* NCEEvent.m */,
+				575A3F9D14581F6000537E2E /* NCESpeaker.h */,
+				575A3F9E14581F6000537E2E /* NCESpeaker.m */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -410,6 +428,8 @@
 				575A3EA6145811C400537E2E /* RestKitDemo.xcdatamodeld in Sources */,
 				575A3EA9145811C400537E2E /* NCEMasterViewController.m in Sources */,
 				575A3EAC145811C400537E2E /* NCEDetailViewController.m in Sources */,
+				575A3F9C14581F4900537E2E /* NCEEvent.m in Sources */,
+				575A3F9F14581F6000537E2E /* NCESpeaker.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -470,6 +490,7 @@
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "\"$(RKROOT)/Build\"";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				OTHER_LDFLAGS = "-ObjC";
 				SDKROOT = iphoneos;
@@ -489,6 +510,7 @@
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "\"$(RKROOT)/Build\"";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				OTHER_LDFLAGS = "-ObjC";
