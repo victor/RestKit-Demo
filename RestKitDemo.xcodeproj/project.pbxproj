@@ -1,0 +1,320 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		575A3E91145811C400537E2E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 575A3E90145811C400537E2E /* UIKit.framework */; };
+		575A3E93145811C400537E2E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 575A3E92145811C400537E2E /* Foundation.framework */; };
+		575A3E95145811C400537E2E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 575A3E94145811C400537E2E /* CoreGraphics.framework */; };
+		575A3E97145811C400537E2E /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 575A3E96145811C400537E2E /* CoreData.framework */; };
+		575A3E9D145811C400537E2E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 575A3E9B145811C400537E2E /* InfoPlist.strings */; };
+		575A3E9F145811C400537E2E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 575A3E9E145811C400537E2E /* main.m */; };
+		575A3EA3145811C400537E2E /* NCEAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 575A3EA2145811C400537E2E /* NCEAppDelegate.m */; };
+		575A3EA6145811C400537E2E /* RestKitDemo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 575A3EA4145811C400537E2E /* RestKitDemo.xcdatamodeld */; };
+		575A3EA9145811C400537E2E /* NCEMasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 575A3EA8145811C400537E2E /* NCEMasterViewController.m */; };
+		575A3EAC145811C400537E2E /* NCEDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 575A3EAB145811C400537E2E /* NCEDetailViewController.m */; };
+		575A3EAF145811C400537E2E /* NCEMasterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 575A3EAD145811C400537E2E /* NCEMasterViewController.xib */; };
+		575A3EB2145811C400537E2E /* NCEDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 575A3EB0145811C400537E2E /* NCEDetailViewController.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		575A3E8C145811C400537E2E /* RestKitDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RestKitDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		575A3E90145811C400537E2E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		575A3E92145811C400537E2E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		575A3E94145811C400537E2E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		575A3E96145811C400537E2E /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		575A3E9A145811C400537E2E /* RestKitDemo-Info.plist */ = {isa = PBXFileReference; path = "RestKitDemo-Info.plist"; sourceTree = "<group>"; };
+		575A3E9C145811C400537E2E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		575A3E9E145811C400537E2E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		575A3EA0145811C400537E2E /* RestKitDemo-Prefix.pch */ = {isa = PBXFileReference; path = "RestKitDemo-Prefix.pch"; sourceTree = "<group>"; };
+		575A3EA1145811C400537E2E /* NCEAppDelegate.h */ = {isa = PBXFileReference; path = NCEAppDelegate.h; sourceTree = "<group>"; };
+		575A3EA2145811C400537E2E /* NCEAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NCEAppDelegate.m; sourceTree = "<group>"; };
+		575A3EA5145811C400537E2E /* RestKitDemo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = RestKitDemo.xcdatamodel; sourceTree = "<group>"; };
+		575A3EA7145811C400537E2E /* NCEMasterViewController.h */ = {isa = PBXFileReference; path = NCEMasterViewController.h; sourceTree = "<group>"; };
+		575A3EA8145811C400537E2E /* NCEMasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NCEMasterViewController.m; sourceTree = "<group>"; };
+		575A3EAA145811C400537E2E /* NCEDetailViewController.h */ = {isa = PBXFileReference; path = NCEDetailViewController.h; sourceTree = "<group>"; };
+		575A3EAB145811C400537E2E /* NCEDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NCEDetailViewController.m; sourceTree = "<group>"; };
+		575A3EAE145811C400537E2E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/NCEMasterViewController.xib; sourceTree = "<group>"; };
+		575A3EB1145811C400537E2E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/NCEDetailViewController.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		575A3E89145811C400537E2E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				575A3E91145811C400537E2E /* UIKit.framework in Frameworks */,
+				575A3E93145811C400537E2E /* Foundation.framework in Frameworks */,
+				575A3E95145811C400537E2E /* CoreGraphics.framework in Frameworks */,
+				575A3E97145811C400537E2E /* CoreData.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		575A3E81145811C300537E2E = {
+			isa = PBXGroup;
+			children = (
+				575A3E98145811C400537E2E /* RestKitDemo */,
+				575A3E8F145811C400537E2E /* Frameworks */,
+				575A3E8D145811C400537E2E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		575A3E8D145811C400537E2E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				575A3E8C145811C400537E2E /* RestKitDemo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		575A3E8F145811C400537E2E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				575A3E90145811C400537E2E /* UIKit.framework */,
+				575A3E92145811C400537E2E /* Foundation.framework */,
+				575A3E94145811C400537E2E /* CoreGraphics.framework */,
+				575A3E96145811C400537E2E /* CoreData.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		575A3E98145811C400537E2E /* RestKitDemo */ = {
+			isa = PBXGroup;
+			children = (
+				575A3EA1145811C400537E2E /* NCEAppDelegate.h */,
+				575A3EA2145811C400537E2E /* NCEAppDelegate.m */,
+				575A3EA7145811C400537E2E /* NCEMasterViewController.h */,
+				575A3EA8145811C400537E2E /* NCEMasterViewController.m */,
+				575A3EAA145811C400537E2E /* NCEDetailViewController.h */,
+				575A3EAB145811C400537E2E /* NCEDetailViewController.m */,
+				575A3EAD145811C400537E2E /* NCEMasterViewController.xib */,
+				575A3EB0145811C400537E2E /* NCEDetailViewController.xib */,
+				575A3EA4145811C400537E2E /* RestKitDemo.xcdatamodeld */,
+				575A3E99145811C400537E2E /* Supporting Files */,
+			);
+			path = RestKitDemo;
+			sourceTree = "<group>";
+		};
+		575A3E99145811C400537E2E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				575A3E9A145811C400537E2E /* RestKitDemo-Info.plist */,
+				575A3E9B145811C400537E2E /* InfoPlist.strings */,
+				575A3E9E145811C400537E2E /* main.m */,
+				575A3EA0145811C400537E2E /* RestKitDemo-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		575A3E8B145811C400537E2E /* RestKitDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 575A3EB5145811C400537E2E /* Build configuration list for PBXNativeTarget "RestKitDemo" */;
+			buildPhases = (
+				575A3E88145811C400537E2E /* Sources */,
+				575A3E89145811C400537E2E /* Frameworks */,
+				575A3E8A145811C400537E2E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RestKitDemo;
+			productName = RestKitDemo;
+			productReference = 575A3E8C145811C400537E2E /* RestKitDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		575A3E83145811C300537E2E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
+			buildConfigurationList = 575A3E86145811C300537E2E /* Build configuration list for PBXProject "RestKitDemo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 575A3E81145811C300537E2E;
+			productRefGroup = 575A3E8D145811C400537E2E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				575A3E8B145811C400537E2E /* RestKitDemo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		575A3E8A145811C400537E2E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				575A3E9D145811C400537E2E /* InfoPlist.strings in Resources */,
+				575A3EAF145811C400537E2E /* NCEMasterViewController.xib in Resources */,
+				575A3EB2145811C400537E2E /* NCEDetailViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		575A3E88145811C400537E2E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				575A3E9F145811C400537E2E /* main.m in Sources */,
+				575A3EA3145811C400537E2E /* NCEAppDelegate.m in Sources */,
+				575A3EA6145811C400537E2E /* RestKitDemo.xcdatamodeld in Sources */,
+				575A3EA9145811C400537E2E /* NCEMasterViewController.m in Sources */,
+				575A3EAC145811C400537E2E /* NCEDetailViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		575A3E9B145811C400537E2E /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				575A3E9C145811C400537E2E /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		575A3EAD145811C400537E2E /* NCEMasterViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				575A3EAE145811C400537E2E /* en */,
+			);
+			name = NCEMasterViewController.xib;
+			sourceTree = "<group>";
+		};
+		575A3EB0145811C400537E2E /* NCEDetailViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				575A3EB1145811C400537E2E /* en */,
+			);
+			name = NCEDetailViewController.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		575A3EB3145811C400537E2E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+		575A3EB4145811C400537E2E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		575A3EB6145811C400537E2E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "RestKitDemo/RestKitDemo-Prefix.pch";
+				INFOPLIST_FILE = "RestKitDemo/RestKitDemo-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		575A3EB7145811C400537E2E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "RestKitDemo/RestKitDemo-Prefix.pch";
+				INFOPLIST_FILE = "RestKitDemo/RestKitDemo-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		575A3E86145811C300537E2E /* Build configuration list for PBXProject "RestKitDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				575A3EB3145811C400537E2E /* Debug */,
+				575A3EB4145811C400537E2E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		575A3EB5145811C400537E2E /* Build configuration list for PBXNativeTarget "RestKitDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				575A3EB6145811C400537E2E /* Debug */,
+				575A3EB7145811C400537E2E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		575A3EA4145811C400537E2E /* RestKitDemo.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				575A3EA5145811C400537E2E /* RestKitDemo.xcdatamodel */,
+			);
+			currentVersion = 575A3EA5145811C400537E2E /* RestKitDemo.xcdatamodel */;
+			path = RestKitDemo.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 575A3E83145811C300537E2E /* Project object */;
+}
