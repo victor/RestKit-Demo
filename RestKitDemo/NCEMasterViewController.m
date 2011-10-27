@@ -34,7 +34,7 @@
 
 - (void)fetchEvents;
 {
-    [[RKObjectManager sharedManager] loadObjectsAtResourcePath:@"/events" delegate:self];
+    [[RKObjectManager sharedManager] loadObjectsAtResourcePath:@"/events.json" delegate:self];
 }
 
 
