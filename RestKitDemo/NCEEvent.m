@@ -10,7 +10,7 @@
 
 @implementation NCEEvent
 
-@synthesize eventId, name, shortDescription, fullDescription, startDate, location, latitude, longitude;
+@synthesize eventId, name, shortDescription, fullDescription, startDate, location, latitude, longitude, speakers;
 
 
 - (void)dealloc;
@@ -23,6 +23,7 @@
     [location release];
     [latitude release];
     [longitude release];
+    [speakers release];
     [super dealloc];
 }
 
