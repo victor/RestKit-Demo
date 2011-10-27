@@ -45,7 +45,10 @@
     
 }
 
-
+- (void)objectLoader:(RKObjectLoader *)objectLoader didFailWithError:(NSError *)error
+{
+    NSLog(@"%@",[error description]);
+}
 
 // Mark: - Memory management
 
