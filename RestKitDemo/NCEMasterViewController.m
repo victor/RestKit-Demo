@@ -42,7 +42,8 @@
 
 - (void)objectLoader:(RKObjectLoader *)loader didLoadObjects:(NSArray *)objects;
 {
-    
+    self.events = objects;
+    [self.tableView reloadData];
 }
 
 - (void)objectLoader:(RKObjectLoader *)objectLoader didFailWithError:(NSError *)error
@@ -164,13 +165,13 @@
 // Customize the number of sections in the table view.
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return [[self.fetchedResultsController sections] count];
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    id <NSFetchedResultsSectionInfo> sectionInfo = [[self.fetchedResultsController sections] objectAtIndex:section];
-    return [sectionInfo numberOfObjects];
+
+    return [self.events count];
 }
 
 // Customize the appearance of table view cells.
@@ -335,8 +336,9 @@
 
 - (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath
 {
-    NSManagedObject *managedObject = [self.fetchedResultsController objectAtIndexPath:indexPath];
-    cell.textLabel.text = [[managedObject valueForKey:@"timeStamp"] description];
+    //NSManagedObject *managedObject = [self.fetchedResultsController objectAtIndexPath:indexPath];
+    NCEEvent *event = [self.events objectAtIndex:indexPath.row];
+    cell.textLabel.text = event.name;
 }
 
 - (void)insertNewObject
