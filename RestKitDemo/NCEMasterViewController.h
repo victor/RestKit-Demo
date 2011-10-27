@@ -11,12 +11,17 @@
 @class NCEDetailViewController;
 
 #import <CoreData/CoreData.h>
+#import <RestKit/RestKit.h>
 
-@interface NCEMasterViewController : UITableViewController <NSFetchedResultsControllerDelegate>
+
+@interface NCEMasterViewController : UITableViewController <NSFetchedResultsControllerDelegate,RKObjectLoaderDelegate>
 
 @property (strong, nonatomic) NCEDetailViewController *detailViewController;
 
 @property (strong, nonatomic) NSFetchedResultsController *fetchedResultsController;
 @property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
 
+@property (retain, nonatomic) NSArray *events;
+
+- (void)fetchEvents;
 @end

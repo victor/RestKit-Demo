@@ -9,6 +9,8 @@
 #import "NCEMasterViewController.h"
 
 #import "NCEDetailViewController.h"
+#import "NCEEvent.h"
+#import "NCESpeaker.h"
 
 @interface NCEMasterViewController ()
 - (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath;
@@ -16,9 +18,7 @@
 
 @implementation NCEMasterViewController
 
-@synthesize detailViewController = _detailViewController;
-@synthesize fetchedResultsController = __fetchedResultsController;
-@synthesize managedObjectContext = __managedObjectContext;
+
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -30,12 +30,37 @@
     }
     return self;
 }
-							
+
+
+- (void)fetchEvents;
+{
+    [[RKObjectManager sharedManager] loadObjectsAtResourcePath:@"/events" delegate:self];
+}
+
+
+/// Mark: - RKObjectManager delegate
+
+- (void)objectLoader:(RKObjectLoader *)loader didLoadObjects:(NSArray *)objects;
+{
+    
+}
+
+
+
+// Mark: - Memory management
+
+@synthesize detailViewController = _detailViewController;
+@synthesize fetchedResultsController = __fetchedResultsController;
+@synthesize managedObjectContext = __managedObjectContext;
+@synthesize events;
+
 - (void)dealloc
 {
     [_detailViewController release];
     [__fetchedResultsController release];
     [__managedObjectContext release];
+    [events release];
+    
     [super dealloc];
 }
 
@@ -43,19 +68,61 @@
 {
     [super didReceiveMemoryWarning];
     // Release any cached data, images, etc that aren't in use.
+    self.events = nil;
 }
 
 #pragma mark - View lifecycle
 
 - (void)viewDidLoad
 {
+    static dispatch_once_t pred;
+    
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+	/// Do any additional setup after loading the view, typically from a nib.
     // Set up the edit and add buttons.
-    self.navigationItem.leftBarButtonItem = self.editButtonItem;
+    //self.navigationItem.leftBarButtonItem = self.editButtonItem;
+    
+    UIBarButtonItem *reloadButton = [[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemRefresh target:self action:@selector(fetchEvents)] autorelease];
+    self.navigationItem.rightBarButtonItem = reloadButton;
+    
+    
+    dispatch_once(&pred, ^{
+        
+        /// Initialize RestKit
+        RKObjectManager *objectManager = [RKObjectManager objectManagerWithBaseURL:@"http://localhost:3000/"];
+        
+        /// Enable automatic network activity indicator management
+        [RKRequestQueue sharedQueue].showsNetworkActivityIndicatorWhenBusy = YES;
+        
+        /// Mappings
+        RKObjectMapping *eventMapping = [RKObjectMapping mappingForClass:[NCEEvent class]];
+        RKObjectMapping *speakerMapping = [RKObjectMapping mappingForClass:[NCESpeaker class]];
+        
+        
+        [eventMapping mapKeyPath:@"id" toAttribute:@"eventId"];
+        [eventMapping mapKeyPath:@"name" toAttribute:@"name"];
+        [eventMapping mapKeyPath:@"short_description" toAttribute:@"shortDescription"];
+        [eventMapping mapKeyPath:@"full_description" toAttribute:@"fullDescription"];
+        [eventMapping mapKeyPath:@"start_date" toAttribute:@"startDate"];
+        [eventMapping mapKeyPath:@"location" toAttribute:@"location"];
+        [eventMapping mapKeyPath:@"latitude" toAttribute:@"latitude"];
+        [eventMapping mapKeyPath:@"longitud" toAttribute:@"longitude"];
+        [eventMapping mapRelationship:@"speakers" withMapping:speakerMapping];
+        /// Compare to:
+        /// [eventMapping mapKeyPath:@"speakers" toRelationship:@"speakers" withMapping:speakerMapping];
+        
 
-    UIBarButtonItem *addButton = [[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(insertNewObject)] autorelease];
-    self.navigationItem.rightBarButtonItem = addButton;
+        
+        [speakerMapping mapKeyPath:@"id" toAttribute:@"speakerId"];
+        [speakerMapping mapKeyPath:@"name" toAttribute:@"name"];
+        [speakerMapping mapKeyPath:@"photo_url" toAttribute:@"photoURL"];
+        [speakerMapping mapKeyPath:@"bio" toAttribute:@"bio"];
+        
+        [objectManager.mappingProvider setMapping:eventMapping forKeyPath:@"event"];
+        [objectManager.mappingProvider setMapping:speakerMapping forKeyPath:@"speaker"];
+    });
+    
+    
 }
 
 - (void)viewDidUnload
