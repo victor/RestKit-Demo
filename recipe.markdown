@@ -32,6 +32,14 @@ Create `RKObjectMapping`s
 
 Add mapping to the object manager mapping provider.
 
+In the rails model, remember to add
+
+```ruby
+self.include_root_in_json = true
+```
+
+if rails version >=3.1 as by default it’s false, and we need a rooted json
+
 ## load objects and store them somewhere
 
 
