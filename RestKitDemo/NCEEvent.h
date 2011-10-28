@@ -17,8 +17,8 @@
 @property (nonatomic, retain) NSString *fullDescription;
 @property (nonatomic, retain) NSDate *startDate;
 @property (nonatomic, retain) NSString *location;
-@property (nonatomic, retain) NSString *latitude;
-@property (nonatomic, retain) NSString *longitude;
+@property (nonatomic, assign) double latitude;
+@property (nonatomic, assign) double longitude;
 @property (nonatomic, retain) NSArray *speakers;
 
 @end

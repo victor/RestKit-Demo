@@ -21,8 +21,8 @@
     [fullDescription release];
     [startDate release];
     [location release];
-    [latitude release];
-    [longitude release];
+  //  [latitude release];
+  //  [longitude release];
     [speakers release];
     [super dealloc];
 }
