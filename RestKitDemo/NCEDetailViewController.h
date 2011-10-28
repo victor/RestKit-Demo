@@ -8,10 +8,19 @@
 
 #import <UIKit/UIKit.h>
 
+@class MKMapView;
+@class NCEEvent;
+
 @interface NCEDetailViewController : UIViewController <UISplitViewControllerDelegate>
 
-@property (strong, nonatomic) id detailItem;
+@property (strong, nonatomic) NCEEvent *detailItem;
 
-@property (strong, nonatomic) IBOutlet UILabel *detailDescriptionLabel;
+@property (retain, nonatomic) IBOutlet UILabel *header;
+@property (retain, nonatomic) IBOutlet UILabel *subTitle;
+@property (retain, nonatomic) IBOutlet UILabel *date;
+@property (retain, nonatomic) IBOutlet MKMapView *map;
+@property (retain, nonatomic) IBOutlet UITextView *description;
+
+@property (retain, nonatomic) IBOutlet UITableView *speakersTable;
 
 @end

@@ -30,6 +30,8 @@
 		575A3F8214581CF400537E2E /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 575A3F8114581CF400537E2E /* libxml2.dylib */; };
 		575A3F9C14581F4900537E2E /* NCEEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 575A3F9B14581F4900537E2E /* NCEEvent.m */; };
 		575A3F9F14581F6000537E2E /* NCESpeaker.m in Sources */ = {isa = PBXBuildFile; fileRef = 575A3F9E14581F6000537E2E /* NCESpeaker.m */; };
+		57A4C1AE145A176500C8B97D /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57A4C1AD145A176500C8B97D /* MapKit.framework */; };
+		57A4C1BC145A2BAD00C8B97D /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57A4C1BB145A2BAD00C8B97D /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -147,6 +149,8 @@
 		575A3F9B14581F4900537E2E /* NCEEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCEEvent.m; sourceTree = "<group>"; };
 		575A3F9D14581F6000537E2E /* NCESpeaker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCESpeaker.h; sourceTree = "<group>"; };
 		575A3F9E14581F6000537E2E /* NCESpeaker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCESpeaker.m; sourceTree = "<group>"; };
+		57A4C1AD145A176500C8B97D /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		57A4C1BB145A2BAD00C8B97D /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,6 +171,8 @@
 				575A3E93145811C400537E2E /* Foundation.framework in Frameworks */,
 				575A3E95145811C400537E2E /* CoreGraphics.framework in Frameworks */,
 				575A3E97145811C400537E2E /* CoreData.framework in Frameworks */,
+				57A4C1AE145A176500C8B97D /* MapKit.framework in Frameworks */,
+				57A4C1BC145A2BAD00C8B97D /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -194,7 +200,9 @@
 		575A3E8F145811C400537E2E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				57A4C1BB145A2BAD00C8B97D /* CoreLocation.framework */,
 				575A3F8114581CF400537E2E /* libxml2.dylib */,
+				57A4C1AD145A176500C8B97D /* MapKit.framework */,
 				575A3F7F14581CE100537E2E /* SystemConfiguration.framework */,
 				575A3F7D14581CCA00537E2E /* MobileCoreServices.framework */,
 				575A3F7B14581CB800537E2E /* CFNetwork.framework */,

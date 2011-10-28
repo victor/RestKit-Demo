@@ -7,6 +7,10 @@
 //
 
 #import "NCEDetailViewController.h"
+#import <MapKit/MKMapView.h>
+#import "NCEEvent.h"
+#import <CoreLocation/CoreLocation.h>
+
 
 @interface NCEDetailViewController ()
 @property (strong, nonatomic) UIPopoverController *masterPopoverController;
@@ -16,14 +20,24 @@
 @implementation NCEDetailViewController
 
 @synthesize detailItem = _detailItem;
-@synthesize detailDescriptionLabel = _detailDescriptionLabel;
+@synthesize header = _header;
+@synthesize subTitle = _subTitle;
+@synthesize date = _date;
+@synthesize map = _map;
+@synthesize description = _description;
+@synthesize speakersTable = _speakersTable;
 @synthesize masterPopoverController = _masterPopoverController;
 
 - (void)dealloc
 {
     [_detailItem release];
-    [_detailDescriptionLabel release];
     [_masterPopoverController release];
+    [_header release];
+    [_subTitle release];
+    [_date release];
+    [_map release];
+    [_description release];
+    [_speakersTable release];
     [super dealloc];
 }
 
@@ -49,7 +63,14 @@
     // Update the user interface for the detail item.
 
     if (self.detailItem) {
-        self.detailDescriptionLabel.text = [self.detailItem description];
+        self.view.hidden = NO;
+        self.header.text = [self.detailItem name];
+        self.subTitle.text = [self.detailItem shortDescription];
+        self.description.text = [self.detailItem fullDescription];
+        self.date.text = [[self.detailItem startDate] description];
+        self.map.centerCoordinate = CLLocationCoordinate2DMake(self.detailItem.latitude, self.detailItem.longitude);
+    } else {
+        self.view.hidden = YES;
     }
 }
 
@@ -70,6 +91,12 @@
 
 - (void)viewDidUnload
 {
+    [self setHeader:nil];
+    [self setSubTitle:nil];
+    [self setDate:nil];
+    [self setMap:nil];
+    [self setDescription:nil];
+    [self setSpeakersTable:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
