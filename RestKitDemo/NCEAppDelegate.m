@@ -42,6 +42,7 @@
     UINavigationController *detailNavigationController = [[[UINavigationController alloc] initWithRootViewController:detailViewController] autorelease];
 
     self.splitViewController = [[[UISplitViewController alloc] init] autorelease];
+    self.splitViewController.view.backgroundColor = [UIColor viewFlipsideBackgroundColor];
     self.splitViewController.delegate = detailViewController;
     self.splitViewController.viewControllers = [NSArray arrayWithObjects:masterNavigationController, detailNavigationController, nil];
     masterViewController.detailViewController = detailViewController;
