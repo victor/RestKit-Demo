@@ -226,8 +226,9 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSManagedObject *selectedObject = [[self fetchedResultsController] objectAtIndexPath:indexPath];
-    self.detailViewController.detailItem = selectedObject;    
+    //NSManagedObject *selectedObject = [[self fetchedResultsController] objectAtIndexPath:indexPath];
+    NCEEvent *selectedEvent = [self.events objectAtIndex:indexPath.row];
+    self.detailViewController.detailItem = selectedEvent;    
 }
 
 #pragma mark - Fetched results controller
