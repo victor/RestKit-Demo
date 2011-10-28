@@ -11,7 +11,7 @@
 @class MKMapView;
 @class NCEEvent;
 
-@interface NCEDetailViewController : UIViewController <UISplitViewControllerDelegate>
+@interface NCEDetailViewController : UIViewController <UISplitViewControllerDelegate,UITableViewDelegate, UITableViewDataSource>
 
 @property (strong, nonatomic) NCEEvent *detailItem;
 
@@ -22,5 +22,7 @@
 @property (retain, nonatomic) IBOutlet UITextView *description;
 
 @property (retain, nonatomic) IBOutlet UITableView *speakersTable;
+@property (retain, nonatomic) NSArray *speakers;
+
 
 @end
